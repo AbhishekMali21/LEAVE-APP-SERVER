@@ -10,11 +10,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class LeaveResponse {
-	
-    private EmployeeResonse employeeResonse;
-    private LocalDate leaveStartDate;
-    private LocalDate leaveEndDate;
-    private LeaveType leaveType;
-    private String leaveReason;
+
+	private EmployeeResonse employeeResonse;
+	private LocalDate leaveStartDate;
+	private LocalDate leaveEndDate;
+	private LeaveType leaveType;
+	private String leaveReason;
+	private LocalDate appliedDate;
 
 }

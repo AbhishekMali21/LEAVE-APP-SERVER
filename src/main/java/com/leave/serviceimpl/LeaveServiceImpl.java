@@ -1,5 +1,6 @@
 package com.leave.serviceimpl;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,6 +35,7 @@ public class LeaveServiceImpl implements LeaveService {
 		leave.setLeaveEndDate(leaveRequest.getLeaveEndDate());
 		leave.setLeaveType(leaveRequest.getLeaveType());
 		leave.setLeaveReason(leaveRequest.getLeaveReason());
+		leave.setAppliedDate(LocalDate.now());
 
 		leaveRepository.save(leave);
 
@@ -64,6 +66,7 @@ public class LeaveServiceImpl implements LeaveService {
 		response.setLeaveEndDate(leave.getLeaveEndDate());
 		response.setLeaveType(leave.getLeaveType());
 		response.setLeaveReason(leave.getLeaveReason());
+		response.setAppliedDate(leave.getAppliedDate());
 		return response;
 	}
 }

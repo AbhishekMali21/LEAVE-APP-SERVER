@@ -34,4 +34,6 @@ public class Leave {
 	private LeaveType leaveType;
 
 	private String leaveReason;
+	
+	private LocalDate appliedDate;
 }
